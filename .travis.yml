@@ -6,4 +6,4 @@ before_install:
   - docker build -t ssundararaj/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run ssundararaj/docker-react npm run test -- --coverage --detectOpenHandles --forceExit
+  - docker run -e CI=true ssundararaj/docker-react npm run test -- --coverage
